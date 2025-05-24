@@ -34,7 +34,7 @@ pipeline {
 
     post {
         success {
-            echo "✅ Deployment successful: http://localhost:8082:80"
+            echo "✅ Deployment successful:http://localhost:8082"
         }
         failure {
             echo "❌ Build failed. Check error logs."
