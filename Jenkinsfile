@@ -27,14 +27,14 @@ pipeline {
 
         stage('Deploy Container') {
             steps {
-                bat "docker run -d -p 8080:80 --name %CONTAINER_NAME% %IMAGE_NAME%"
+                bat "docker run -d -p 8082:80 --name %CONTAINER_NAME% %IMAGE_NAME%"
             }
         }
     }
 
     post {
         success {
-            echo "✅ Deployment successful: http://localhost:8090"
+            echo "✅ Deployment successful: http://localhost:8080"
         }
         failure {
             echo "❌ Build failed. Check error logs."
