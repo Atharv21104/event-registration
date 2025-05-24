@@ -1,0 +1,9 @@
+version: '3'
+services:
+  event-registration:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:80"
+    container_name: event-registration
